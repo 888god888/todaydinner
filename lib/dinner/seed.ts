@@ -1,0 +1,17 @@
+import type {Restaurant,Period} from "./engine";
+const daily=(start:string,end:string):Period[]=>[{days:[0,1,2,3,4,5,6],start,end}];
+const mos="https://www.mos.com.tw/shop/search.aspx?area=_&f=&page=20",sukiya="https://www.sukiya-jp.com.tw/shoplist/taoyuan.html";
+const base={verified:"2026-11-09",priceNote:"一人一餐預算估計，非即時菜單報價"};
+export const seed:Restaurant[]=[
+ {...base,id:"mozhu-yiwen",name:"墨竹亭・藝文店",category:"麵食",address:"桃園市桃園區大興西路二段108號",area:"藝文／大興",priceMin:180,priceMax:320,description:"今天想吃麵，就留一點時間給熱騰騰的燃麵。",hours:[...daily("11:30","14:00"),...daily("17:00","20:30")],hoursText:"每日 11:30–14:00／17:00–20:30",source:"https://www.mozhuting.com/store/yiwen",phone:"03-3015958"},
+ {...base,id:"liang-yiwen",name:"梁社漢排骨・桃園藝文店",category:"飯／便當",address:"桃園市桃園區中埔六街89號",area:"藝文／大興",priceMin:110,priceMax:180,description:"一份主餐配白飯，適合想快點決定的日子。",hours:daily("10:30","20:00"),hoursText:"每日 10:30–20:00",source:"https://foodpoint.tycg.gov.tw/Home/ShopPage?shopbranchId=418c681e-12ad-4ba4-ad71-d0bd7a10eafa",phone:"03-3178858"},
+ {...base,id:"fmsc-yiwen",name:"鬍鬚張・藝文特區店",category:"飯／便當",address:"桃園市桃園區中正路901號",area:"藝文／大興",priceMin:100,priceMax:220,description:"滷肉飯、湯、小菜，組合成你今天想吃的份量。",hours:daily("10:30","22:00"),hoursText:"每日 10:30–22:00",source:"https://shop.fmsc.com.tw/pages/門市資訊",phone:"03-3571021"},
+ {...base,id:"nu-yiwen",name:"NU PASTA・桃園藝文店",category:"義式",address:"桃園市桃園區中埔六街33號",area:"藝文／大興",priceMin:180,priceMax:350,description:"換個口味，讓義大利麵接手今晚的選擇。",hours:daily("11:00","21:00"),hoursText:"每日 11:00–21:00",source:"https://www.nu-pasta.com.tw/index.php?a=桃竹苗地區&mn=1&module=store",phone:"03-3589366"},
+ {...base,id:"mos-yiwen",name:"摩斯漢堡・桃園藝文廣場店",category:"速食",address:"桃園市桃園區中正路1121號1樓",area:"藝文／大興",priceMin:140,priceMax:270,description:"米漢堡或漢堡都可以，晚一點吃也有選擇。",hours:daily("00:00","00:00"),hoursText:"24 小時營業",source:mos,phone:"03-3564005"},
+ {...base,id:"mos-jingguo",name:"摩斯漢堡・桃園經國店",category:"速食",address:"桃園市桃園區經國路451-1號",area:"經國／春日",priceMin:140,priceMax:270,description:"用一份漢堡套餐，簡單結束今天的選擇障礙。",hours:daily("06:00","23:00"),hoursText:"每日 06:00–23:00",source:mos,phone:"03-3579437"},
+ {...base,id:"mos-zhengguang",name:"摩斯漢堡・桃園正光店",category:"速食",address:"桃園市桃園區正光路108號1樓",area:"市府／正光",priceMin:140,priceMax:270,description:"想簡單吃、想帶走，今晚可以考慮這一站。",hours:daily("07:00","22:00"),hoursText:"每日 07:00–22:00",source:mos,phone:"03-3321029"},
+ {...base,id:"stone-jingguo",name:"石二鍋・桃園經國萬家福店",category:"鍋物",address:"桃園市桃園區經國路369號2樓",area:"經國／春日",priceMin:300,priceMax:450,description:"想坐下來慢慢吃，一人一鍋也很剛好。",hours:[{days:[1,2,3,4,5],start:"11:00",end:"22:00"},{days:[0,6],start:"10:30",end:"22:00"}],hoursText:"平日 11:00–22:00／週末 10:30–22:00；21:00 最後點餐，20:30 結束取號。國定假日請確認公告。",source:"https://www.12hotpot.com.tw/store.php?area=2",phone:"03-3463517"},
+ {...base,id:"sukiya-chunri",name:"すき家・桃園春日店",category:"日式",address:"桃園市桃園區春日路628號1樓",area:"經國／春日",priceMin:100,priceMax:240,description:"今晚來碗牛丼，或換一份咖哩飯。",hours:daily("10:00","21:00"),hoursText:"每日 10:00–21:00；20:30 最後點餐",source:sukiya},
+ {...base,id:"sukiya-station",name:"すき家・桃園站前店",category:"日式",address:"桃園市桃園區大同路24號1樓",area:"車站／舊城",priceMin:100,priceMax:240,description:"車站附近的日式丼飯，也是晚歸時的選擇。",hours:daily("00:00","00:00"),hoursText:"24 小時營業",source:sukiya},
+ {...base,id:"chunshui-yiwen",name:"春水堂・桃園藝文店",category:"麵食",address:"桃園市桃園區同德五街67號1樓",area:"藝文／大興",priceMin:200,priceMax:450,description:"麵食配一杯茶，給晚餐多一點悠閒。",hours:daily("10:30","22:00"),hoursText:"每日 10:30–22:00",source:"https://www.chunshuitang.com.tw/location-detail/chungmao_plaza_store/",phone:"03-3460599"}
+];
